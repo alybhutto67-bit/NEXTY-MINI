@@ -1,0 +1,11 @@
+[build]
+builder = "NIXPACKS"
+
+[build.nixpacksPlan.phases.setup]
+nixPkgs = ["nodejs_20", "npm-9_x", "yt-dlp", "ffmpeg", "python3"]
+
+[build.nixpacksPlan.phases.install]
+cmds = ["npm install"]
+
+[deploy]
+startCommand = "npm start"
